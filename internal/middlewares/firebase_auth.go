@@ -7,7 +7,6 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/OnlyMD-321/go-pharmacy/internal/firebase"
-	"firebase.google.com/go/v4/auth"
 )
 
 const ContextFirebaseUID = "firebaseUID"
@@ -28,7 +27,7 @@ func FirebaseAuthMiddleware() gin.HandlerFunc {
 			return
 		}
 
-		client, err := firebase.App().Auth(context.Background())
+		client, err := firebase.App.Auth(context.Background())
 		if err != nil {
 			c.AbortWithStatusJSON(http.StatusInternalServerError, gin.H{"error": "Failed to initialize Firebase Auth client"})
 			return

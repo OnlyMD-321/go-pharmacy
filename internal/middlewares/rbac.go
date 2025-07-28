@@ -7,7 +7,6 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/jackc/pgx/v5/pgxpool"
-	"github.com/OnlyMD-321/go-pharmacy/internal/models"
 	"github.com/OnlyMD-321/go-pharmacy/internal/repositories"
 )
 
