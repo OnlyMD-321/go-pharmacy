@@ -32,7 +32,7 @@ func InitDB() {
 		log.Fatalf("Unable to create DB pool: %v", err)
 	}
 
-	log.Println("✅ Database connected")
+	log.Println("Database connected")
 }
 
 func CloseDB() {

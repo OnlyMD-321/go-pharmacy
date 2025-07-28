@@ -18,7 +18,7 @@ var AppConfig Config
 func Load() {
 	err := godotenv.Load()
 	if err != nil {
-		log.Println("⚠️ .env file not found. Using system environment variables.")
+		log.Println(".env file not found. Using system environment variables.")
 	}
 
 	AppConfig = Config{
@@ -27,7 +27,7 @@ func Load() {
 		PostgresDSN:           getEnv("POSTGRES_DSN", ""),
 	}
 
-	log.Println("✅ Configuration loaded")
+	log.Println("Configuration loaded")
 }
 
 func getEnv(key string, fallback string) string {
